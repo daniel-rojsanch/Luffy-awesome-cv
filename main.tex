@@ -1,39 +1,42 @@
-% Plantilla de CV
-% autor Daniel Rojas Sánchez
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plantilla de CV en LaTeX %
+% Daniel Rojas Sánchez   %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%% Tamaño de hoja y margenes
+\documentclass[10pt,letterpaper]{article}
+\textwidth = 21.59cm
+\textheight = 27.9cm
+\usepackage[margin=2.6cm, top=2cm]{geometry}
 
-\documentclass[11pt,a4paper]{article}
-\usepackage[margin=2.5cm]{geometry}
 \usepackage{fontspec}
-\setmainfont{Josefin Sans} 
-% Jara
-% Alegreya Sans
-% Josefin Sans
-% Lato
+\setmainfont{Times New Roman}
 \pagestyle{empty}
-
-
-
+\setlength{\parindent}{0mm}
 
 \usepackage{multicol}
+\usepackage[compact]{titlesec}
+\titleformat*{\section}{\large\color{title}}
+\titleformat*{\subsection}{\normalsize\bfseries}
 
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,      
+    urlcolor=info
+}
+
+%%%% colores 
 \usepackage[dvipsnames]{xcolor}
-\definecolor{bg}{HTML}{FFFFFC}
-\definecolor{title}{HTML}{EF5350}
-\definecolor{personalinfo}{HTML}{546E7A}
+\definecolor{title}{HTML}{B03A2E}
+\definecolor{info}{HTML}{34495E}
+\definecolor{txt}{HTML}{212F3C}
 
-%7986CB blue
-%4DB6AC green
-\definecolor{subtitle}{HTML}{546E7A}
+%%% usar iconos de nerd fonts para los datos de contacto 
+%%% https://www.nerdfonts.com/cheat-sheet
 
-\definecolor{txt}{HTML}{1C3334}
-\definecolor{line}{HTML}{D1C4E9}
-
-
-
-
-\setmonofont[Color={txt}]{Hack}[
-    Scale=1,
+\setmonofont{Hack}[
+    Scale=0.95,
     Path=./Hack/,
     Extension = .ttf,
     UprightFont=*-Regular,
@@ -42,93 +45,177 @@
     BoldItalicFont=*-BoldItalic
     ]
 
+\setsansfont{Calibri}[
+    Scale=1.1,
+    Path=./Calibri/,
+    Extension = .ttf,
+    UprightFont=*-Regular,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    BoldItalicFont=*-BoldItalic
+    ]
+\setlength{\parskip}{-1.7mm}
+
+
 \begin{document}
-%\pagecolor{bg}
+
 \color{txt}
 
 \begin{center}
-    \Huge{ \textcolor{title}{\textbf{Monkey D Luffy} } \textcolor{line}{$|$} }  \Huge{\textbf{Pirata}}\\
-    \vspace{10pt}
-  \small{
-  \textcolor{personalinfo}{
-    {\ttfamily }\hspace{0.1cm} luffymonkey@gmail.com \hspace{0.25cm} 
-    {\ttfamily }\hspace{0.1cm} https://github.com/luffy\hspace{0.25cm} 
-    {\ttfamily }\hspace{0.1cm} 55-44-32-90-88} \hspace{0.25cm}\\
-    }
-    \textcolor{personalinfo}{
-    {\ttfamily }\hspace{0.1cm} luffyD
-    {\ttfamily }\hspace{0.1cm} Santa Cruz Roma  México\hspace{0.25cm} 
-    {\ttfamily }\hspace{0.1cm} 20 años
-    }
+    \Large{ \textcolor{title}{ Monkey D.Luffy }$|$ \Large{Pirata}\\
+    \vspace{5pt}}
+  
+\small{
+  \textcolor{info}{
+    {\ttfamily }\hspace{0.1cm} drojass003@gmail.com \hspace{0.38cm}
+    {\ttfamily }\hspace{0.15cm} \href{https://github.com/daniel-rojsanch}{ github.com/daniel-rojsanch}\hspace{0.38cm}
+    {\ttfamily }\hspace{0.1cm} 55-32-44-00-88}\\
+ 
+    \textcolor{info}{
+    {\ttfamily }\hspace{0.1cm} Teoloyucan, Edo.Mex\hspace{0.38cm} 
+    {\ttfamily }\hspace{0.1cm} 25 años\hspace{0.38cm}
+    {\ttfamily }\hspace{0.15cm} \href{https://www.linkedin.com/in/daniel-rojsanch/}{daniel-rojsanch}}
+    }\\
+\vspace{0.7mm}
+\textcolor{title}{\noindent\rule{14cm}{0.1pt}}
+
 \end{center}
 
-\textcolor{line}{ \hline}
+
+\vspace{0.7mm}
+
+\begin{center}
+``Mi objetivo es crecer como persona, mejorando mis habilidades y conocimientos."
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%  EDUCACION %%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{1.5mm}
+\section*{EDUCACIÓN}
+\vspace{2mm}
+\subsection*{Licenciatura en Actuaría}
+Universidad Nacional Autónoma de México. Facultad de Estudios Superiores Acatlán.\dotfill {\small 2015 - 2019 }\\
+Titulado
+\vspace{2mm}
+\subsection*{Diplomado en Mercadotecnia}
+Universidad Nacional Autónoma de México. Facultad de Estudios Superiores Cuautitlán.\dotfill {\small 2020}
+
+\vspace{4mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%  EXPERIENCIA  %%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{EXPERIENCIA}
+\vspace{2mm}
+\subsection*{Tutor de Matemáticas}
+{\small Servicio Social - UNAM \dotfill{ 08/2018 - 12/2018 }}\\
+
+Gracias a mi promedio, formé parte del Programa Preventivo de Materias con Alto Índice de Reprobación, en el cual impartía clases a compañeros de primer semestre de Cálculo, Geometría y Álgebra.
 
 
-\section*{{\ttfamily 拾 }Educación}
-
-
-\subsection*{Licenciatura en Arquitectura \hfill {\small\textbf{1815 - 2019}} }
-
-\textbf{Universidad Nacional Autónoma de México, Faculdad de Estudios Superiores Iztacala}\\[1pt]
-Actualmente cuento con el 100$\%$ de créditos, en espera de entrega de título.
-
-
-
-\subsection*{Diplomado en Vida Silvestre \hfill {\small\textbf{2050}} }
-\textbf{Universidad Nacional Autonoma de México, Facultad de Estudios Superiores Cuautitlán} 
-
-\subsection*{Idiomas}
-
-\textbf{Inglés: }  Escritura y Lectura nivel medio
-
-\noindent\textbf{Frances: }  Escritura y Lectura nivel Avanzado
-
-\noindent\textbf{Ruso: }  Escritura y Lectura nivel basico
-
-
-\textcolor{line}{\hline}
-
-
-\section*{{\ttfamily  }Experiencia }
-
-\subsection*{Tutor \hfill {\small\textbf{agosto 1018 - diciembre 2000}} }
-{\small \textbf{Servicio Social \hfill IPN}}\\
- Formé parte del Programa Preventivo de Materias con Alto Índice de Reprobación, en el cual impartía clases
-a compañeros de primer semestre de Cálculo, Geometría y Álgebra, logrando bajar el índice de
-reprobación.
-
-\subsection*{Mecanico \hfill {\small octubre 2021 - mayo 2022}}
-{\small \textbf{FC America \hfill Madrid España}}\\
-Mis funciones consistían en la reparacion de naves, coches y barcos del club, asi como de su mantenimineto. Dar cursos de JavaScript, Fortran a los demas empleados.
-
-\textcolor{line}{\hline}
-
-
-\section*{{\ttfamily  }Computación}
-
-\subsection*{GitHub}
-
-En mi perfil de GitHub subo proyectos relacionados con el cómputo estadístico, visualización de datos, etc.
-
-\subsection*{Herramientas}
+\begin{itemize}
+\setlength{\itemsep}{-0.8mm}
+\setlength{\labelwidth}{-0.3cm}
 
 \begin{multicols}{2}
-  %  \begin{itemize}
+\item Control de grupo.
+\item Planear clases.
+\item Recursos audiovisuales.
 
-\noindent \textbf{$\bullet$ R}: Algunos paquetes usados: ggplot2, dplyr, shiny.\\[0.1pt]
+\columnbreak
 
-\noindent \textbf{$\bullet$ MS Office: } Word, PowerPoint, Excel (VBA, Tablas dinámicas). 
-        %Tomé algunos cursos en plataformas como Udemy y Coursera.
+\item Comunicación asertiva.
+\item Facilidad de palabra.
+\item Se logro bajar el índice de reprobación.
 
-\noindent \textbf{$\bullet$ Bases de Datos:} SQL, MariaBD.\\[0.1pt]
-
-\noindent \textbf{$\bullet$ Web}: JavaScript, CSS, HTML\\[0.1pt]
-
-
-\noindent \textbf{$\bullet$ Otras: }RStudio, LaTeX, Linux(Ubuntu, Manjaro), Markdown. Julia, SAP, JupyterLab.
-        
 \end{multicols}
+\end{itemize}
+      
+  
+
+
+\subsection*{Auxiliar Administrativo}
+{\small CEDIS Liverpool - Cuautitlán Edo.Mex \dotfill 10/2021 - 05/2022}
+
+
+\begin{itemize}
+\setlength{\itemsep}{-0.8mm}
+\setlength{\labelwidth}{-0.3cm}
+
+\begin{multicols}{2}
+\item Análisis de información.
+\item Detección y comunicación de riesgos.
+\item Coordinar grupo de personas.
+
+\columnbreak
+
+\item Soporte a la operación.
+\item Excel, Google Sheets, SAP.
+\item Actualizar y automatizar reportes.
+
+\end{multicols}
+
+\end{itemize}
+
+\subsection*{Analista de Gestión de Inventarios}
+{\small CEDIS Chedraui - Teoloyucan Edo.Mex \dotfill 07/2022 - 01/2023}
+
+\begin{itemize}
+\setlength{\itemsep}{-0.8mm}
+\setlength{\labelwidth}{-0.3cm}
+
+\begin{multicols}{2}
+
+\item Extracción y análisis de datos.
+\item Atención a solicitudes de diferentes áreas.
+\item Participación en nuevos proyectos.
+
+\columnbreak
+
+\item[-] Elaboración de KPI's.
+\item[-] Excel, SAP, WM.
+\item[-] Visualización de datos.
+      \par  
+\end{multicols}
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%  HABILIDADES  %%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section*{HABILIDADES}
+\vspace{3mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Idioma Inglés:} Escritura y lectura nivel medio.\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Software}
+\vspace{-3mm}
+\begin{itemize}
+\setlength{\itemsep}{-0.8mm}
+\setlength{\labelwidth}{-0.3cm}
+
+\begin{multicols}{2}
+
+\item \textit{R:} Nivel intermedio,  (ggplot2, shiny).
+\item \textit{Excel: } (tablas dinámicas , VBA).
+\item \textit{SQL.} 
+
+\columnbreak
+
+
+\item \textit{LaTeX.}
+\item \textit{Julia:} Gadfly, DataFrames.
+\item \textit{Otras:} Linux, Markdown, Jupyter.
+
+\end{multicols}
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Cursos y Proyecto personal}
+\vspace{3mm}
+En GitHub alojo proyectos sobre programación, cómputo estadístico, visualización de datos.\\[3pt]
+ Introducción a Data Science: Programación Estadística con R \dotfill UNAM - Coursera
+ 
 
 
 
